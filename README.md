@@ -11,8 +11,6 @@ cp 2-dam_inventory/{,.}env
 ## Set variables
 In `2-dam_inventory/.env` set the variables. Focus on the MYSQL password, it must be the one provided in this .env file.
 
-# Install npm packages
-! Should be executed inside container (cd inventari-tic && npm i)
 ## Build database
 docker-compose up -d && \
 DB_HOST=$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' 2-dam_inventory-mysql) && \
